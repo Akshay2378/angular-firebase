@@ -1,4 +1,18 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div>
+  <input type="text" name="Fname" [(ngModel)]="name">
+  <p>{{name}}</p>
+
+  <app-p-name></app-p-name>
+  <app-server></app-server>
+  <app-red></app-red>
+  <app-yellow></app-yellow>
+  <app-green></app-green>
+
+
+  <button (click)="toggleParagraph()">Toggle Paragraph</button>
+  <p *ngIf="para" [ngStyle]="{ color : getColor() }">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Consequatur cum ipsam accusantium hic magnam quia at quam est. Accusantium ratione numquam explicabo beatae quasi
+    corrupti nihil consectetur itaque odio sint?</p>
+  <div *ngFor="let i of counter" ></div>
+  <!-- <div *ngFor="let click in range(0,5)"></div> -->
+</div>

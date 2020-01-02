@@ -1,13 +1,28 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+import { FormsModule } from "@angular/forms";
+import { ServerComponent } from '../app/server/server.component';
+import { GreenComponent } from '../app/green/green.component';
+import { RedComponent } from '../app/red/red.component';
+import { YellowComponent } from './yellow/yellow.component';
+import { PNameComponent } from '../app/p-name/p-name.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent,
+    ServerComponent,
+    GreenComponent,
+    RedComponent,
+    PNameComponent,
+    YellowComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
